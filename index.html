@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bike World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Home Section */
+        #home {
+            position: relative;
+            background: url('./biken2.jpg') no-repeat center center;
+            background-size: cover;
+            background-color: #000;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #home .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #home .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 20px;
+        }
+
+        /* Responsive Image */
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Service Card */
+        /* Ensure service cards have the same height */
+.service-card {
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Uniform image size */
+.service-img {
+    width: 100%;
+    max-width: 250px;
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Ensure consistent image appearance */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #007bff;
+        opacity: 0.5;
+        transition: all 0.3s ease-in-out;
+    }
+
+    
+    
+
+    .carousel-item .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bike World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="display-4 fw-bold">Welcome to Bike World</h1>
+            <p class="lead">Your one-stop solution for all bike services.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- About Section -->
+    <section id="about" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <h2 class="mb-4">About Us</h2>
+            <div class="d-flex justify-content-center">
+                <img src="./biken.jpg" alt="Bike Service" class="img-fluid border" 
+                    style="width: 300px; height: 300px; object-fit: cover; border: 4px solid #00bcd4; border-radius: 10px;">
+            </div>
+            <div class="mt-4 px-3" style="max-width: 800px; margin: auto; font-size: 1.2rem; text-align: justify;">
+                <p><strong>At Bike World</strong>, we are dedicated to keeping your bike in top condition. With 
+                    <strong>1 year of experience</strong>, we have been providing expert servicing, repairs, and maintenance to ensure your ride is always smooth and reliable. 
+                    From routine check-ups to major repairs, we handle it all with care and precision. Our team of skilled professionals is committed to delivering 
+                    <strong>quality service</strong> at affordable prices. We prioritize <strong>customer satisfaction</strong> and strive to make bike maintenance hassle-free for you.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    
+    
+<!-- Services Section with Swipeable Carousel -->
+<section id="services" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Bike Services</h2>
+        <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Service 1"></button>
+                <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="1" aria-label="Service 2"></button>
+                <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="2" aria-label="Service 3"></button>
+                <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="3" aria-label="Service 4"></button>
+                <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="4" aria-label="Service 5"></button>
+            </div>
+
+            <div class="carousel-inner text-center">
+                <div class="carousel-item active">
+                    <div class="card service-card p-3 mx-auto" style="width: 250px; transition: transform 0.3s ease;">
+                        <img src="./general service.png" alt="General Service" class="service-img" style="height: 150px; width: 100%; object-fit: cover;">
+                        <h5 class="mt-2">General Service</h5>
+                        <p class="small">Complete check-up to ensure optimal performance.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card service-card p-3 mx-auto" style="width: 250px; transition: transform 0.3s ease;">
+                        <img src="./breakdown image.avif" alt="Vehicle Breakdown" class="service-img" style="height: 150px; width: 100%; object-fit: cover;">
+                        <h5 class="mt-2">Vehicle Breakdown</h5>
+                        <p class="small">Emergency roadside assistance.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card service-card p-3 mx-auto" style="width: 250px; transition: transform 0.3s ease;">
+                        <img src="./engine.webp" alt="Engine Reboring" class="service-img" style="height: 150px; width: 100%; object-fit: cover;">
+                        <h5 class="mt-2">Engine Reboring</h5>
+                        <p class="small">Precision engine reboring for efficiency.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card service-card p-3 mx-auto" style="width: 250px; transition: transform 0.3s ease;">
+                        <img src="./repairs.jpg" alt="Major Repairs" class="service-img" style="height: 150px; width: 100%; object-fit: cover;">
+                        <h5 class="mt-2">Major Repairs</h5>
+                        <p class="small">Expert mechanical and electrical repairs.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card service-card p-3 mx-auto" style="width: 250px; transition: transform 0.3s ease;">
+                        <img src="./images.jpg" alt="Wash & Polish" class="service-img" style="height: 150px; width: 100%; object-fit: cover;">
+                        <h5 class="mt-2">Wash & Polish</h5>
+                        <p class="small">Professional cleaning and polishing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card p-4" style="background-color: #d3d3d3; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Enter Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Enter Your Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="serviceType" class="form-label">Type of Service</label>
+                                <select class="form-select" id="serviceType">
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="General Service">General Service</option>
+                                    <option value="Vehicle Breakdown">Vehicle Breakdown</option>
+                                    <option value="Engine Reboring">Engine Reboring</option>
+                                    <option value="Major Repairs">Major Repairs</option>
+                                    <option value="Wash & Polish">Wash & Polish</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Type Your Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    
+               
+    
+    
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Corporate Office -->
+                <div class="col-md-4 mb-4">
+                    <h5>Corporate Office</h5>
+                    <p>Bike World Pvt Ltd,<br> 
+                       Motor Plaza, 1st Floor, <br> 
+                       MG Road, Bangalore – 560042, <br> 
+                       Karnataka, India.</p>
+                    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                </div>
+    
+                <!-- Head Office -->
+                <div class="col-md-4 mb-4">
+                    <h5>Head Office</h5>
+                    <p>Bike World Pvt Ltd,<br> 
+                       No.1, Auto Tower, <br> 
+                       Anna Salai, Chennai – 600006, <br> 
+                       Tamil Nadu, India.</p>
+                    <p><i class="fas fa-envelope"></i> info@bikeworld.com</p>
+                </div>
+    
+                <!-- Our Branches -->
+                <div class="col-md-4 mb-4">
+                    <h5>Our Branches</h5>
+                    <p> Chennai, Coimbatore, Erode, Madurai, Trichy, Salem, Kochi, Vellore, Pondicherry, Nagercoil, Kanyakumari.</p>
+                </div>
+            </div>
+    
+            <hr class="border-light">
+    
+            <!-- Social Media & Policies -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+                <p class="mb-2 mb-md-0">&copy; 2025 Bike World Pvt Ltd. All Rights Reserved.</p>
+                <div>
+                    <a href="#" class="text-white mx-2"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <p class="mb-0">
+                    <a href="#" class="text-white text-decoration-none">Privacy Policy</a> | 
+                    <a href="#" class="text-white text-decoration-none">Terms & Conditions</a> | 
+                    <a href="#" class="text-white text-decoration-none">Cancellation & Refund Policy</a>
+                </p>
+            </div>
+            
+           
+        </div>
+    </footer>
+    
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
